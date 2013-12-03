@@ -3,10 +3,9 @@
 
 In this repository, you will find, wiki pages describing how to implement Weemo Video in web applications.
 
-- [Javascript API Quick Start](https://github.com/weemo/Release-4.0/wiki/Javascript-API---Quick-start)
-- [Javascript API Integration](https://github.com/weemo/Release-4.0/wiki/Javascript-API-Integration)
-- [Javascript API Naming Rules](https://github.com/weemo/Release-4.0/wiki/WeemoDriver-Naming)
-- [Upgrading from 3.2 to 4.0](https://github.com/weemo/JavaScript-API/wiki/Upgrade-3.2-to-4.0)
+- [Javascript API Quick Start](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start)
+- [Javascript API Integration](https://github.com/weemo/Release-5.0/wiki/Javascript-API-Integration)
+- [Javascript API Naming Rules](https://github.com/weemo/Release-5.0/wiki/WeemoDriver-Naming)
 
 For a full JavaScript API reference plese refer to our official documentation website : [http://docs.weemo.com/js/index.html](http://docs.weemo.com/js/index.html)
 
