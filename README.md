@@ -5,8 +5,8 @@ In this repository, you will find, wiki pages describing how to implement Weemo 
 
 
 ###Javascript API Quick-start:
-- [Quick-start WeemoDriver only](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start--(WeemoDriver))
-- [Quick-start WebRTC only](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start--(WebRTC))
+- [Quick-start WeemoDriver only](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start---WeemoDriver)
+- [Quick-start WebRTC only](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start---WebRTC)
 - [Quick-start WeemoDriver and WebRTC](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start)
 
 ###Javascript API Integration:
