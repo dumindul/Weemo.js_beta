@@ -1,46 +1,47 @@
+<!-- This file is used by the callee, connects and waits for a call, used name is destination_uid -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>My Weemo Application</title>
-<!-- Quick-Start: Step 2 -->
-    <script type="text/javascript" src="https://download.weemo.com/js/webappid/YOUR_APP_IDENTIFIER"></script>
+<!-- Quick-Start: Step 3 -->
+    <script type="text/javascript" src="https://download.weemo.com/js/webappid/YOUR_APP_ID"></script>
+    <link rel="stylesheet" type="text/css" href="weemo.css">
 </head>
 <body>
 
     <script type="text/javascript">
         // Initializze a object for current call
         var current_call = null;
-/* Quick-Start: Step 3 */ 
-        // Initialize the Main Object with WebAppIdentifier, Token, Debug and DisplayName
-        var weemo = new Weemo("YOUR_APP_IDENTIFIER", "user_id", "internal");
- // Set this method to 1 if you want use the javascript console log
-        weemo.setDebugLevel(1);
 /* Quick-Start: Step 4 */ 
-        weemo.initialize();
+        // Initialize the Main Object with WebAppIdentifier, Token, Debug and DisplayName
+        var weemo = new Weemo("YOUR_APP_ID", "destination_uid", "internal");
 /* Quick-Start: Step 5 */ 
+        weemo.initialize();
+        // Set this method to 1 if you want use the javascript console log
+        weemo.setDebugLevel(1);
+/* Quick-Start: Step 6 */ 
         weemo.onWeemoDriverNotStarted = function(downloadUrl) {
-		    alert('WeemoDriver not detected, copy and paste this following url on your browser: '+downloadUrl);
-	    };
+                    alert('WeemoDriver not detected, copy and paste this following url on your browser: '+downloadUrl);
+            };
 
         // Get the Connection Handler callback when the JavaScript is connected to WeempoDriver
         weemo.onConnectionHandler = function(message, code) {
             if(window.console)
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
-/* Quick-Start: Step 6 */      
+/* Quick-Start: Step 7 */      
                 // Authenticate token and webappId
                 case 'connectedWeemoDriver':
                 case 'connectedWebRTC':
                     weemo.authenticate();
                 break; 
                 case 'sipOk':
-/* Quick-Start: Step 7-1 */                  	
-                    weemo.setDisplayName("My_Displayname")
+/* Quick-Start: Step 8-1 */                          
+                    weemo.setDisplayName("Callee");
                     document.getElementById('stat').value = "User authenticate";
                 break;
                 case 'loggedasotheruser':
-                case 'loggedasotherdevice':
                 // force connection, kick other logged users
                     weemo.authenticate(1);
                 break;
@@ -52,9 +53,9 @@
             if (args.type == "call" && args.status == "terminated") {
                 document.getElementById('stat').value = "Call Terminated";
             }
-        }     
+        }      
 
-           weemo.onWebrtcCallHandler = function(callObj, args) {
+      weemo.onWebrtcCallHandler = function(callObj, args) {
         if(args.type == 'webRTCcall' && args.status == 'incoming') {
             // Load html
             var confirmStr;
@@ -83,7 +84,7 @@
             sv.addEventListener('mousedown', dragg.startMovingPIP, false);
             window.addEventListener('mouseup', dragg.stopMoving, false);
         } 
-    }  
+    }
     </script>
 
     <input type="text" id="stat" name="debug" maxlength="42"/>
@@ -96,8 +97,6 @@
     <br/>
     <!-- Hang Up the call -->
     <button type="button" onclick="current_call.hangup();"> Hang Up </button>
+
 </body>
 </html>
-
-
-
