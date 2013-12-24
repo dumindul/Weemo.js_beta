@@ -1,24 +1,25 @@
-<!-- This file is used by the caller, used name is source_uid, and it calls the callee named destination_uid -->
+<!-- This file is used by the caller, used name is caller_uid, and it calls the callee named calle_uid -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>My Weemo Application</title>
+    <title>My Weemo Application: Caller</title>
 <!-- Quick-Start: Step 3 -->
-    <script type="text/javascript" src="https://download.weemo.com/js/webappid/YOUR_APP_ID"></script>
+    <script type="text/javascript" src="https://download-ppr.weemo.com/js/webappid/0de5dc4e3dcc/env/ppr/"></script>
 </head>
+<style type="text/css">
+    body{
+        font-family: Helvetica;
+    }
+</style>
 <body>
 
     <script type="text/javascript">
-        // Initializze a object for current call
-        var current_call = null;
 /* Quick-Start: Step 4 */ 
         // Initialize the Main Object with WebAppIdentifier, Token, DisplayName
-        var weemo = new Weemo("YOUR_APP_ID", "source_uid", "internal");
+        var weemo = new Weemo("0de5dc4e3dcc", "caller_uid", "internal", "ppr/", "1", "Caller");
 /* Quick-Start: Step 5 */ 
         weemo.initialize();
-        // Set this method to 1 if you want use the javascript console log
-        weemo.setDebugLevel(1);
 /* Quick-Start: Step 6 */ 
         weemo.onWeemoDriverNotStarted = function(downloadUrl) {
                     alert('WeemoDriver not detected, copy and paste this following url on your browser: '+downloadUrl);
@@ -35,12 +36,9 @@
                     weemo.authenticate();
                 break; 
                 case 'sipOk':
-/* Quick-Start: Step 8-1 */                          
-                    weemo.setDisplayName("Caller");
-/* Quick-Start: Step 8 */  
-                // Create a one to one call with destination_uid and report that user is connected
-                    weemo.createCall("destination_uid", "internal", "Caller Name");
-                    document.getElementById('stat').value = "User authenticate";
+                    document.getElementById('connecting').style.color = "#CCCCCC";
+                    document.getElementById('stat').innerHTML = "Connected as Caller using WeemoDriver";
+                    document.getElementById('buttonCall').style.display = "block";
                 break;
                 case 'loggedasotheruser':
                 // force connection, kick other logged users
@@ -52,21 +50,20 @@
         weemo.onCallHandler = function(callObj, args) {
             current_call = callObj;
             if (args.type == "call" && args.status == "terminated") {
-                document.getElementById('stat').value = "Call Terminated";
-            }
+                document.getElementById('call').innerHTML = "";
+            } else if (args.type == "call" && args.status == "proceeding") {
+                document.getElementById('call').innerHTML = "Calling Calle";
+            } else if (args.type == "call" && args.status == "active") {
+                document.getElementById('call').innerHTML = "";
+            } 
+
         }       
     </script>
-
-    <input type="text" id="stat" name="debug" maxlength="42"/>
-    <br/>
-    <!-- Send commands to call object -->
-    <button type="button" onclick="current_call.videoStart();"> Show video </button>
-    <button type="button" onclick="current_call.videoStop();"> Stop video </button>
-    <button type="button" onclick="current_call.audioMute();"> Mute </button>
-    <button type="button" onclick="current_call.audioUnMute();"> UnMute </button>
-    <br/>
-    <!-- Hang Up the call -->
-    <button type="button" onclick="current_call.hangup();"> Hang Up </button>
+    <h3>Welcome to Weemo HelloWorld App<h3/>
+    <h4 id="connecting">Connecting as Caller...</h4>
+    <h4 id="stat"><h4/>
+    <button style="display:none;" id="buttonCall" onclick="weemo.createCall('callee_uid', 'internal', 'Callee');">Click to call Callee</button>
+    <h4 id="call"><h4/>
 
 </body>
 </html>
