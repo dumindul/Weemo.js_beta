@@ -1,4 +1,4 @@
-<!-- This file is used by the caller, used name is caller_uid, and it calls the callee named calle_uid -->
+<!-- This file is used by the caller, used name is caller_uid, and it calls the callee named callee_uid -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,11 +48,10 @@
         }
         // Call Object is created by callback, this function permits to catch events comming from the call object
         weemo.onCallHandler = function(callObj, args) {
-            current_call = callObj;
             if (args.type == "call" && args.status == "terminated") {
                 document.getElementById('call').innerHTML = "";
             } else if (args.type == "call" && args.status == "proceeding") {
-                document.getElementById('call').innerHTML = "Calling Calle";
+                document.getElementById('call').innerHTML = "Calling Callee...";
             } else if (args.type == "call" && args.status == "active") {
                 document.getElementById('call').innerHTML = "";
             } 

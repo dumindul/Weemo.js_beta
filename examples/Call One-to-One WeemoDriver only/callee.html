@@ -49,7 +49,6 @@
 
         // Call Object is created by callback, this function permits to catch events comming from the call object
         weemo.onCallHandler = function(callObj, args) {
-            current_call = callObj;
             if (args.type == "call" && args.status == "active") {
                 document.getElementById('call').innerHTML = "";
             }
