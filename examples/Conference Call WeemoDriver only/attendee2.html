@@ -1,9 +1,9 @@
-<!-- This file is used by the Host, used name is host_uid -->
+<!-- This file is used by the Attendee, used name is attendeetwo_uid -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>My Weemo Application: Host</title>
+    <title>My Weemo Application: Attendee</title>
 <!-- Quick-Start: Step 3 -->
     <script type="text/javascript" src="https://download-ppr.weemo.com/js/webappid/0de5dc4e3dcc/env/ppr/"></script>
 </head>
@@ -16,8 +16,8 @@
 
     <script type="text/javascript">
 /* Quick-Start: Step 4 */ 
-        // Initialize the Main Object with WebAppIdentifier, Token, DisplayName
-        var weemo = new Weemo("0de5dc4e3dcc", "host_uid", "internal", "ppr/", "1", "Host");
+        // Initialize the Main Object with WebAppIdentifier, Token, Debug and DisplayName
+        var weemo = new Weemo("0de5dc4e3dcc", "attendeetwo_uid", "internal", "ppr/", "1", "Attendee 2");
 /* Quick-Start: Step 5 */ 
         weemo.initialize();
 /* Quick-Start: Step 6 */ 
@@ -37,7 +37,7 @@
                 break; 
                 case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
-                    document.getElementById('stat').innerHTML = "Connected as Host using WeemoDriver";
+                    document.getElementById('stat').innerHTML = "Connected as Attendee 2 using WeemoDriver";
                     document.getElementById('buttonCall').style.display = "block";
                 break;
                 case 'loggedasotheruser':
@@ -51,7 +51,7 @@
             if (args.type == "call" && args.status == "terminated") {
                 document.getElementById('call').innerHTML = "";
             } else if (args.type == "call" && args.status == "proceeding") {
-                document.getElementById('call').innerHTML = "Create Conference call...";
+                document.getElementById('call').innerHTML = "Joining Conference call...";
             } else if (args.type == "call" && args.status == "active") {
                 document.getElementById('call').innerHTML = "";
             } 
@@ -59,9 +59,9 @@
         }       
     </script>
     <h3>Welcome to Weemo HelloWorld App<h3/>
-    <h4 id="connecting">Connecting as Host...</h4>
+    <h4 id="connecting">Connecting as Attendee 2...</h4>
     <h4 id="stat"><h4/>
-    <button style="display:none;" id="buttonCall" onclick="weemo.createCall('host_uid', 'host', 'Host');">Click to Host a video conference</button>
+    <button style="display:none;" id="buttonCall" onclick="weemo.createCall('host_uid', 'attendee', 'Host');">Click to join the host video conference</button>
     <h4 id="call"><h4/>
 
 </body>
