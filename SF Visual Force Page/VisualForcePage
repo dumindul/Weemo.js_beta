@@ -48,7 +48,7 @@ checkReady(function($) {
           $( deferred.resolve );
       })
   ).done(function(){
-     weemo = new Weemo("4ef4c8f48af9","{!$User.Username}","internal"); 
+     weemo = new Weemo("MyAppIdentifier","{!$User.Username}","internal"); 
     weemo.onConnectionHandler = function(message, code) {
         if(window.console)
             console.log("Connection Handler : " + message + ' ' + code);
