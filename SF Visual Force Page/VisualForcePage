@@ -42,7 +42,7 @@ var checkReady = function(callback) {
     // Start polling...
 checkReady(function($) {
   $.when(
-      $.getScript("https://download-ppr.weemo.com/js/webappid/4ef4c8f48af9/env/ppr/"),
+      $.getScript("https://download.weemo.com/js/webappid/MyAppIdentifier/"),
       $.Deferred(
         function( deferred ){
           $( deferred.resolve );
