@@ -1,0 +1,62 @@
+<script type='text/javascript'>
+            function randomString(length, chars) {
+                var result = '';
+                for (var i = length; i > 0; --i){
+                  result += chars[Math.round(Math.random() * (chars.length - 1))];
+                }
+                return result;
+            }
+
+            var uidGuest = liveagent.getSid();
+              if(!uidGuest){
+                uidGuest = randomString(5, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'); 
+              }
+              var script = document.createElement("SCRIPT");
+                script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
+                script.type = 'text/javascript';
+                document.getElementsByTagName("head")[0].appendChild(script);
+                
+                var checkReady = function(callback) {
+                    if (window.jQuery) {
+                        callback(jQuery);
+                    }
+                    else {
+                        window.setTimeout(function() { checkReady(callback); }, 100);
+                    }
+                };
+                    // Start polling...
+                checkReady(function($) {
+                  $.when(
+                      $.getScript("https://download.weemo.com/js/webappid/MyAppIdentifier"),
+                      $.Deferred(
+                        function( deferred ){
+                          $( deferred.resolve );
+                      })
+                  ).done(function(){
+                
+                
+                
+                    weemo = new Weemo("MyAppIdentifier",'guest-'+uidGuest.toLowerCase(),"internal",'', '1', 'Visitor'); 
+                    weemo.onConnectionHandler = function(message, code) {
+                        if(window.console)
+                            console.log("Connection Handler : " + message + ' ' + code);
+                        switch(message) {
+                            case 'connectedWebRTC':
+                            case 'connectedWeemoDriver':
+                                weemo.authenticate();
+                                break;
+                                case 'sipOk':
+                                break;
+                        }
+                    }
+                
+                    weemo.onWeemoDriverNotStarted = function(downloadUrl) {
+                        alert(downloadUrl);
+                    }
+                    weemo.initialize();
+                  });
+                });
+
+            liveagent.setName('guest-'+uidGuest.toLowerCase());
+            liveagent.addCustomDetail('visitorSessionID','guest-'+uidGuest.toLowerCase(),true);
+        </script>
