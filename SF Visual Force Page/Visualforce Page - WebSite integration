@@ -1,3 +1,7 @@
+<head>
+<link rel="stylesheet" href="http://docs.weemo.com/css/weemo.css" />
+</head>
+
 <script type='text/javascript'>
             function randomString(length, chars) {
                 var result = '';
