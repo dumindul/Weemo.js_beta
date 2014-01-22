@@ -61,18 +61,17 @@
                 document.getElementById('call').innerHTML = "Calling Callee...";
             } else if (args.type == "call" && args.status == "active") {
                 document.getElementById('call').innerHTML = "";
-            } 
-
-        }   
-
-        weemo.onWebrtcCallHandler = function(callObj, args) {
-            if(args.type == 'webRTCcall' && args.status == 'active') {
+            } else if(args.type == 'webRTCcall' && args.status == 'active') {
                 document.getElementById('call').innerHTML = "";
             } else if(args.type == 'webRTCcall' && args.status == 'failed') {
                 document.getElementById('call').innerHTML = "Call can not be established, try again";
             }  else if(args.type == 'webRTCcall' && args.status == 'outgoing') {
-                document.getElementById('call').innerHTML = "Calling Callee...";            }
-        }       
+                document.getElementById('call').innerHTML = "Calling Callee...";            
+            }
+
+        }   
+
+
     </script>
     <h3>Welcome to Weemo HelloWorld App</h3>
     <h4 id="connecting">Connecting as Caller...</h4>
