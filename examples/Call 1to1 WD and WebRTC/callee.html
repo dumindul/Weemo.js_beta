@@ -40,7 +40,8 @@
                 case 'connectedWebRTC':
                     realTimePlatform = "WebRTC";
                     weemo.authenticate();
-                break;                 case 'sipOk':
+                break;                 
+                case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
                     document.getElementById('stat').innerHTML = "Connected as Callee using "+realTimePlatform;
                     document.getElementById('call').innerHTML = "Waiting for a call";
@@ -59,6 +60,23 @@
             }else if (args.type == "call" && args.status == "terminated") {
                 document.getElementById('stat').innerHTML = "Waiting for a call";
             }
+            if(args.type == 'webRTCcall' && args.status == 'active') {
+                document.getElementById('call').innerHTML = "";
+            } else if(args.type == 'webRTCcall' && args.status == 'failed') {
+                document.getElementById('call').innerHTML = "Call can not be established, try again";
+            }  else if(args.type == 'webRTCcall' && args.status == 'incoming') {
+            var confirmStr;
+            if(callObj.dn !== "undefined" && callObj.dn !== undefined) {
+                confirmStr = callObj.dn + ' invites you to video chat';
+            } else {
+                confirmStr = 'A person invites you to video chat';
+            }
+            if (confirm(confirmStr)) {
+                callObj.accept();
+            } else {
+                callObj.hangup();
+            }
+        }
         }       
 
 
