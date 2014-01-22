@@ -1,8 +1,8 @@
 <link rel="stylesheet" type="text/css" href="https://demo.weemo.com/css/demosalesforce.css"></link>
 <script type='text/javascript' src='https://demo.weemo.com/js/dragNdrop.js'></script>
-<script src="https://download-ppr.weemo.com/js/webappid/adrienvinches" type="text/javascript"></script>
+<script src="https://download.weemo.com/js/webappid/MyAppIdentifier" type="text/javascript"></script>
 <script type='text/javascript'>
-    var WebAppIdentifier = "adrienvinches";
+    var WebAppIdentifier = "MyAppIdentifier";
 
     function randomString(length, chars) {
         var result = '';
