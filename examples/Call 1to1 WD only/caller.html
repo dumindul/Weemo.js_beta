@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title>My Weemo Application: Caller</title>
-<!-- Quick-Start: Step 3 -->
     <script type="text/javascript" src="https://download.weemo.com/js/webappid/YOUR_WEB_APP_IDENTIFIER"></script>
 <style type="text/css">
     body{
@@ -15,22 +14,20 @@
 <body>
 
     <script type="text/javascript">
-/* Quick-Start: Step 4 */ 
-        // Initialize the Main Object with WebAppIdentifier, Token, DisplayName
+        // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
         var weemo = new Weemo("YOUR_WEB_APP_IDENTIFIER", "caller_uid", "internal", "", "1", "Caller");
-/* Quick-Start: Step 5 */ 
+        //Initialize connection between the real-time client and the browser
         weemo.initialize();
-/* Quick-Start: Step 6 */ 
+        // Called if the WeemoDriver is not running and the client computer
         weemo.onWeemoDriverNotStarted = function(downloadUrl) {
                     alert('WeemoDriver not detected, copy and paste this following url on your browser: '+downloadUrl);
             };
 
-        // Get the Connection Handler callback when the JavaScript is connected to WeempoDriver
+        // Get the Connection Handler callback when the JavaScript is connected to the WeemoDriver
         weemo.onConnectionHandler = function(message, code) {
             if(window.console)
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
-/* Quick-Start: Step 7 */      
                 // Authenticate token and webappId
                 case 'connectedWeemoDriver':
                     weemo.authenticate();
