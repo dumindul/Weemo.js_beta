@@ -22,7 +22,7 @@
         //Initialize connection
         weemo.initialize();
 
-        // Get the Connection Handler callback when the JavaScript is connected to the real-time platform
+        // Get the Connection Handler callback when the JavaScript is connected to WebRTC
         weemo.onConnectionHandler = function(message, code) {
             if(window.console)
                 console.log("Connection Handler : " + message + ' ' + code);
