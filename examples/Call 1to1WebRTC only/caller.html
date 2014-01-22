@@ -43,7 +43,7 @@
             }
         }
 
-        weemo.onWebrtcCallHandler = function(callObj, args) {
+        weemo.onCallHandler = function(callObj, args) {
             if(args.type == 'webRTCcall' && args.status == 'active') {
                 document.getElementById('call').innerHTML = "";
             } else if(args.type == 'webRTCcall' && args.status == 'failed') {
