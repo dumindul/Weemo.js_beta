@@ -13,7 +13,6 @@
     }
 </style>
 <body>
-
     <script type="text/javascript">
         // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
         var weemo = new Weemo("YOUR_WEB_APP_IDENTIFIER", "callee_uid", "internal", "", "1", "Callee");
@@ -24,10 +23,6 @@
             if(window.console)
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
-                case 'connectedWebRTC':
-                    // Authenticate token and webappId
-                    weemo.authenticate();
-                break; 
                 case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
                     document.getElementById('stat').innerHTML = "Connected as Callee using WebRTC <br /><br />Waiting for a call";
@@ -38,6 +33,15 @@
                 break;
             }
         }
+        // Call Object is created by callback, this function permits to catch events comming from the call object
+        weemo.onCallHandler = function(callObj, args) {
+            if (args.type == "webRTCcall" && args.status == "active") {
+                document.getElementById('call').innerHTML = "";
+            }
+            if (args.type == "webRTCcall" && args.status == "terminated") {
+                document.getElementById('stat').innerHTML = "Waiting for a call";
+            }
+        }       
 
    </script>
    <h3>Welcome to Weemo HelloWorld App</h3>
