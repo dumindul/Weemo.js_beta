@@ -26,9 +26,15 @@
             if(window.console)
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
+                case 'connectedWeemoDriver':
+                    realTimePlatform = "WeemoDriver";
+                break; 
+                case 'connectedWebRTC':
+                    realTimePlatform = "WebRTC";
+                break; 
                 case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
-                    document.getElementById('stat').innerHTML = "Connected as Attendee 2 using WeemoDriver";
+                    document.getElementById('stat').innerHTML = "Connected as Attendee 2 using "+realTimePlatform;
                     document.getElementById('buttonCall').style.display = "block";
                 break;
                 case 'loggedasotheruser':
