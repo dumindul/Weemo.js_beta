@@ -13,7 +13,6 @@
 </style>
 </head>
 <body>
-
     <script type="text/javascript">
     var realTimePlatform = "";
         // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
@@ -24,20 +23,16 @@
         weemo.onWeemoDriverNotStarted = function(downloadUrl) {
                     alert('WeemoDriver not detected, copy and paste this following url on your browser: '+downloadUrl);
             };
-
         // Get the Connection Handler callback when the JavaScript is connected to real-time client
         weemo.onConnectionHandler = function(message, code) {
             if(window.console)
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
-                // Authenticate token and webappId
                 case 'connectedWeemoDriver':
                     realTimePlatform = "WeemoDriver";
-                    weemo.authenticate();
                 break; 
                 case 'connectedWebRTC':
                     realTimePlatform = "WebRTC";
-                    weemo.authenticate();
                 break; 
                 case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
@@ -62,13 +57,12 @@
                 document.getElementById('call').innerHTML = "";
             } else if(args.type == 'webRTCcall' && args.status == 'failed') {
                 document.getElementById('call').innerHTML = "Call can not be established, try again";
-            }  else if(args.type == 'webRTCcall' && args.status == 'outgoing') {
+            }  else if(args.type == 'webRTCcall' && args.status == 'proceeding') {
                 document.getElementById('call').innerHTML = "Calling Callee...";            
+            } else if (args.type == "webRTCcall" && args.status == "terminated") {
+                document.getElementById('call').innerHTML = "";
             }
-
         }   
-
-
     </script>
     <h3>Welcome to Weemo HelloWorld App</h3>
     <h4 id="connecting">Connecting as Caller...</h4>
