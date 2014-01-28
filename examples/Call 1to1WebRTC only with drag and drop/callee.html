@@ -24,9 +24,15 @@
             if(window.console)
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
+                case 'connectedWeemoDriver':
+                    realTimePlatform = "WeemoDriver";
+                break; 
+                case 'connectedWebRTC':
+                    realTimePlatform = "WebRTC";
+                break; 
                 case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
-                    document.getElementById('stat').innerHTML = "Connected as Callee using WebRTC <br /><br />Waiting for a call";
+                    document.getElementById('stat').innerHTML = "Connected as Callee using "+realTimePlatform+" <br /><br />Waiting for a call";
                 break;
                 case 'loggedasotheruser':
                 // force connection, kick other logged users
