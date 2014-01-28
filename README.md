@@ -44,7 +44,4 @@ Weemo relies on standard protocols and open source technologies to deliver a car
 
 Weemo provides both the client technology and integration means and a worldwide cloud infrastructure. These building blocks are designed to work together as one easy-to-use solution. The application vendor, provider of the web application to be integrated with Weemo, will integrate this SDK to his application to allow audio and video communication.
 
-Learn more about weemo prducts on our corporate website : 
-<a href="http://www.weemo.com">
-<img src="http://docs.weemo.com/img/website_shot.png" width="750px" />
-</a>
+Learn more about Weemo at <a href="http://www.weemo.com">Weemo.com</a>.
