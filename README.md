@@ -18,7 +18,7 @@ In this repository, you will find, wiki pages describing how to implement Weemo 
 - [Definitions](https://github.com/weemo/Release-4.0/wiki/WeemoDriver-Naming)
 
 
-For a full JavaScript API reference plese refer to our official documentation website : [http://docs.weemo.com/js/index.html](http://docs.weemo.com/js/index.html)
+For a full JavaScript API reference plese refer to our official documentation website : [http://docs.weemo.com/beta](http://docs.weemo.com/beta)
 
 
 ## Hardware Requirements
