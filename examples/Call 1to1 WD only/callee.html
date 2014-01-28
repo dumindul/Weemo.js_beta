@@ -28,10 +28,6 @@
             if(window.console)
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
-                // Authenticate token and webappId
-                case 'connectedWeemoDriver':
-                    weemo.authenticate();
-                break; 
                 case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
                     document.getElementById('stat').innerHTML = "Connected as Callee using WeemoDriver";
