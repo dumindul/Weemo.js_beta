@@ -37,9 +37,20 @@
         weemo.onCallHandler = function(callObj, args) {
             if (args.type == "webRTCcall" && args.status == "active") {
                 document.getElementById('call').innerHTML = "";
-            }
-            if (args.type == "webRTCcall" && args.status == "terminated") {
+            } else if (args.type == "webRTCcall" && args.status == "terminated") {
                 document.getElementById('stat').innerHTML = "Waiting for a call";
+            } else if (args.type == 'webRTCcall' && args.status == 'incoming') {
+                var confirmStr;
+                if(callObj.dn !== "undefined" && callObj.dn !== undefined) {
+                    confirmStr = callObj.dn + ' invites you to video chat';
+                } else {
+                    confirmStr = 'A person invites you to video chat';
+                }
+                if (confirm(confirmStr)) {
+                    callObj.accept();
+                } else {
+                    callObj.hangup();
+                }
             }
         }       
 

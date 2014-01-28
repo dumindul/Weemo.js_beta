@@ -1,0 +1,62 @@
+<!-- This file is used by the caller, used name is caller_uid, and it calls the callee named callee_uid --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>My Weemo Application: Caller</title>
+    <script type="text/javascript" src="https://download.weemo.com/js/webappid/adrien51alpha"></script>
+    <script type="text/javascript" src="WeemoDragNDrop.js"></script>
+    <link rel="stylesheet" type="text/css" href="weemo.css">
+    <style type="text/css">
+    body{
+        font-family: Helvetica;
+    }
+</style>
+</head>
+<body>
+    <script type="text/javascript">
+        // Initializze a object for current call
+        var current_call = null;
+        // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
+        var weemo = new Weemo("adrien51alpha", "caller_uid", "internal","", "1", "Caller");
+        //Initialize connection between the real-time client and the browser
+        weemo.initialize();
+        // Get the Connection Handler callback when the JavaScript is connected to WebRTC
+        weemo.onConnectionHandler = function(message, code) {
+            if(window.console)
+                console.log("Connection Handler : " + message + ' ' + code);
+            switch(message) {
+                case 'sipOk':
+                    document.getElementById('connecting').style.color = "#CCCCCC";
+                    document.getElementById('stat').innerHTML = "Connected as Caller using WebRTC";
+                    document.getElementById('buttonCall').style.display = "block";
+                break;
+                case 'loggedasotheruser':
+                // force connection, kick other logged users
+                    weemo.authenticate(1);
+                break;
+            }
+        }
+        weemo.onCallHandler = function(callObj, args) {
+            if (args.type == 'webRTCcall' && args.status == 'active') {
+                document.getElementById('call').innerHTML = "";
+                // Active drag and drop function
+                var rv = document.getElementById('weemo-remotevideo');
+                rv.addEventListener('mousedown', WeemoDragNDrop.startMoving, false);
+                var sv = document.getElementById('weemo-selfview');
+                sv.addEventListener('mousedown', WeemoDragNDrop.startMovingPIP, false);
+                window.addEventListener('mouseup', WeemoDragNDrop.stopMoving, false);
+            } else if(args.type == 'webRTCcall' && args.status == 'failed') {
+                document.getElementById('call').innerHTML = "Call can not be established, try again";
+            }  else if(args.type == 'webRTCcall' && args.status == 'proceeding') {
+                document.getElementById('call').innerHTML = "Calling Callee...";            
+            }
+        }   
+    </script>
+    <h3>Welcome to Weemo HelloWorld App</h3>
+    <h4 id="connecting">Connecting as Caller...</h4>
+    <h4 id="stat"></h4>
+    <button style="display:none;" id="buttonCall" onclick="weemo.createCall('callee_uid', 'internal', 'Callee');">Click to call Callee</button>
+    <h4 id="call"></h4>
+</body>
+</html>
