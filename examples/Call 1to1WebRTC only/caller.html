@@ -14,6 +14,7 @@
 </head>
 <body>
     <script type="text/javascript">
+        var realTimeClient = "";
         // Initializze a object for current call
         var current_call = null;
         // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
@@ -26,14 +27,14 @@
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
                 case 'connectedWeemoDriver':
-                    realTimePlatform = "WeemoDriver";
+                    realTimeClient = "WeemoDriver";
                 break; 
                 case 'connectedWebRTC':
-                    realTimePlatform = "WebRTC";
+                    realTimeClient = "WebRTC";
                 break; 
                 case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
-                    document.getElementById('stat').innerHTML = "Connected as Caller using "+realTimePlatform;
+                    document.getElementById('stat').innerHTML = "Connected as Caller using "+realTimeClient;
                     document.getElementById('buttonCall').style.display = "block";
                 break;
                 case 'loggedasotheruser':
