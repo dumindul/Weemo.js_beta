@@ -15,6 +15,7 @@
 </head>
 <body>
     <script type="text/javascript">
+        var realTimeClient = "";
         // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
         var weemo = new Weemo("adrien51alpha", "callee_uid", "internal", "", "1", "Callee");
         //Initialize connection
@@ -25,14 +26,14 @@
                 console.log("Connection Handler : " + message + ' ' + code);
             switch(message) {
                 case 'connectedWeemoDriver':
-                    realTimePlatform = "WeemoDriver";
+                    realTimeClient = "WeemoDriver";
                 break; 
                 case 'connectedWebRTC':
-                    realTimePlatform = "WebRTC";
+                    realTimeClient = "WebRTC";
                 break; 
                 case 'sipOk':
                     document.getElementById('connecting').style.color = "#CCCCCC";
-                    document.getElementById('stat').innerHTML = "Connected as Callee using "+realTimePlatform+" <br /><br />Waiting for a call";
+                    document.getElementById('stat').innerHTML = "Connected as Callee using "+realTimeClient+" <br /><br />Waiting for a call";
                 break;
                 case 'loggedasotheruser':
                 // force connection, kick other logged users
