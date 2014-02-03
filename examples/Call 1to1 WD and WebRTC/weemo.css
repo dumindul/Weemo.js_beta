@@ -1,9 +1,9 @@
 #weemo-videobox {
 	position: fixed;
-	top: 20px;
+	top: 10px;
 	width: 540px;
     min-height: 300px;
-	left: 320px;
+	left: 10px;
 }
 
 #weemo-remotevideo {
@@ -12,6 +12,7 @@
 	left: 0;
 	z-index: 99999;
 	width: 540px;
+    background-color: #000;
     min-height: 300px;
 }
 
@@ -26,10 +27,10 @@
 #weemo-buttonsbar {
 	position: absolute;
 	z-index: 9999999;
-	width: 114px;
+	width: 152px;
 	height: 32px;
 	bottom: 10px;
-	left: 0;
+	left: 194px;
 }
 
 #weemo-buttonnopip {
@@ -56,6 +57,19 @@
 	width: 38px;
 	float: left;
 	cursor: pointer;
+}
+
+#weemo-buttonnovideo {
+   background-image: url('https://static.weemo.com/img/no-video.png');
+   background-position: 0 -33px;
+   height: 32px;
+   width: 38px;
+   float: left;
+   cursor: pointer;
+}
+
+#weemo-buttonnovideo.active {
+    background-position: 0 0;
 }
 
 /**
