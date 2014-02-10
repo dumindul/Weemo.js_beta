@@ -4,6 +4,7 @@
 	width: 540px;
     min-height: 300px;
 	left: 10px;
+	z-index: 999999;
 }
 
 #weemo-remotevideo {
