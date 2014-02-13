@@ -107,13 +107,8 @@ Connected as Attendee using WeemoDriver
 
 For a full JavaScript API reference plese refer to our official documentation website : [http://docs.weemo.com/beta](http://docs.weemo.com/beta) and refer to our Github documentation:
 
-###Javascript API Quick-start:
 - [Quick-start WeemoDriver and WebRTC](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start)
-
-###Javascript API Integration:
 - [Integration WeemoDriver and WebRTC](https://github.com/weemo/Release-5.x/wiki/Javascript-API-Integration)
-
-###WeemoDriver Definitions
 - [Definitions](https://github.com/weemo/Release-4.0/wiki/WeemoDriver-Naming)
 
 ## Hardware Requirements
