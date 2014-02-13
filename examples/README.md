@@ -14,6 +14,57 @@ In this repository, you will find examples describing how to implement Weemo Vid
     - [Call 1to1WebRTC only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1WebRTC%20only)
     - [Conference Call WD only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Conference%20Call%20WD%20only)
 
+### How to deploy the examples
+
+##### Requirement
+
+It is important that the project is served from a webserver and not from the file system when using WebRTC.
+
+##### Setting up the AppID
+
+Once you had received your ```AppID``` provided by Weemo, you can setup these examples with your AppId in order to test the API. The only thing you have to do is to setup the ```AppId```.
+To do so, for each of the Javascript examples you want to use, you must edit the .html file and
+replace the placeholder "YOUR_APP_IDENTIFIER" by your AppID in the following lines"
+
+```html
+<script type="text/javascript" src="https://download.weemo.com/js/webappid/YOUR_APP_IDENTIFIER"></script>
+```
+
+and 
+
+```JavaScript
+var weemo = new Weemo("YOUR_WEB_APP_IDENTIFIER", "callee_uid", "internal", "", "1", "Callee");
+```
+
+Now that you have setup the AppId you can upload the examples on a webserver and start using them.
+
+In these examples, the ```UID``` and ```Display Name``` are already set. 
+In the caller.html, you will be connected using ```caller_uid``` as a ```UID``` and ```Caller``` as a ```Display Name```, and if you are using callee.html, you will be connected using ```callee_uid``` as a ```UID``` and ```Callee``` as a ```Display Name```.
+
+You can find more details about ```AppID```, ```UID``` and ```Display Name``` [here]()
+
+## How to use the examples
+
+Each one-to-one call examples are composed by two html files. One called ```caller.html``` and the other one named ```callee.html```. In order to initiate a call between these two pages here a the steps you have to follow:
+
+- Open ```callee.html``` in one computer and wait te be connected. You will know that you are connected when you will see these sentences appear in your browswer:
+
+```JavaScript
+Connected as Callee using (WeemoDriver|WebRTC).
+Waiting for a call.
+```
+
+- At this moment open the ```caller.html``` in another computer and wait  to be connected. You will know that you are connected when you will see the following sentence appears in your browser as well as a button labeled 'Click to call Callee':
+
+```JavaScript
+Connected as Caller using (WeemoDriver|WebRTC)
+```
+
+- Click the button 'Click to call Callee' in the ```caller.html``` page in your browser. The call is initiate.
+- Answer the call in the ```callee.html``` page and the Video Chat starts.
+
+>Warning: If using WebRTC, you will be ask to allow access to your microphone and camera when initiating a call and when accepting a call. Click ```Allow``` in order to give WebRTC access to these peripherics. 
+
 
 # Weemo JavaScript API Documentation
 
