@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>My Weemo Application: Host</title>
-    <script type="text/javascript" src="https://download.weemo.com/js/webappid/YOUR_WEB_APP_IDENTIFIER"></script>
+    <script type="text/javascript" src="https://download.weemo.com/js/webappid/YOUR_APP_IDENTIFIER"></script>
 <style type="text/css">
     body{
         font-family: Helvetica;
@@ -15,7 +15,7 @@
     <script type="text/javascript">
         var realTimeClient = "";
         // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
-        var weemo = new Weemo("YOUR_WEB_APP_IDENTIFIER", "host_uid", "internal", "", "1", "Host");
+        var weemo = new Weemo("YOUR_APP_IDENTIFIER", "host_uid", "internal", "", "1", "Host");
         //Initialize connection between the real-time client and the browser
         weemo.initialize();
         // Call if the WeemoDriver is not running and the client computer
