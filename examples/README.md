@@ -8,7 +8,11 @@ In this repository, you will find examples describing how to implement Weemo Vid
 - [How to deploy the examples](https://github.com/weemo/Weemo.js_beta/tree/master/examples#how-to-deploy-the-examples)
     - [Requirement](https://github.com/weemo/Weemo.js_beta/tree/master/examples#requirement)
     - [Setting up the AppID](https://github.com/weemo/Weemo.js_beta/tree/master/examples#setting-up-the-appid)
+        - [One-to-one examples]()
+        - [Multi-party example (WeemoDriver only)]()
 - [How to use the examples](https://github.com/weemo/Weemo.js_beta/tree/master/examples#how-to-use-the-examples)
+    - [One-to-one examples]()
+    - [Multi-party example (WeemoDriver only)]()
 - Examples
     - [Call 1to1 WD and WebRTC](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1%20WD%20and%20WebRTC)
     - [Call 1to1 WD only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1%20WD%20only)
@@ -50,7 +54,7 @@ In the **caller.html**, you will be connected using **caller_uid** as a ```UID``
 
 ##### Multi-party example (WeemoDriver only)
 
-In these examples, the ```UID``` and ```Display Name``` are already set. 
+In this example, the ```UID``` and ```Display Name``` are already set. 
 In the **host.html**, you will be connected using **host_uid** as a ```UID``` and **Host** as a ```Display Name```, and if you are using **attendee1.html** or **attendee2.html**, you will be connected using **attendee_one_uid** or **attendee_two_uid** as a ```UID``` and **Attendee 1** or **Attendee 2** as a ```Display Name```.
 
 >You can find more details about ```AppID```, ```UID``` and ```Display Name``` [here]()
