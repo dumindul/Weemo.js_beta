@@ -4,7 +4,7 @@
 In this repository, you will find examples describing how to implement Weemo Video.
 
 
-###Content:
+### Content:
 - [How to deploy the examples](https://github.com/weemo/Weemo.js_beta/tree/master/examples#how-to-deploy-the-examples)
     - [Requirement](https://github.com/weemo/Weemo.js_beta/tree/master/examples#requirement)
     - [Setting up the AppID](https://github.com/weemo/Weemo.js_beta/tree/master/examples#setting-up-the-appid)
@@ -45,7 +45,7 @@ In the **caller.html**, you will be connected using **caller_uid** as a ```UID``
 
 You can find more details about ```AppID```, ```UID``` and ```Display Name``` [here]()
 
-## How to use the examples
+### How to use the examples
 
 Each one-to-one call examples are composed by two html files. One called **caller.html** and the other one named ```callee.html```. In order to initiate a call between these two pages here a the steps you have to follow:
 
