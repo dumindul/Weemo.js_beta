@@ -3,22 +3,10 @@
 
 In this repository, you will find, wiki pages describing how to implement Weemo Video in web applications.
 
-
-###Javascript API Quick-start:
 - [Quick-start WeemoDriver and WebRTC](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start)
-
-###Javascript API Integration:
 - [Integration WeemoDriver and WebRTC](https://github.com/weemo/Release-5.x/wiki/Javascript-API-Integration)
-
-###WeemoDriver Definitions
 - [Definitions](https://github.com/weemo/Release-4.0/wiki/WeemoDriver-Naming)
-
-###Sample Code:
-- [Call 1to1 WD and WebRTC](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1%20WD%20and%20WebRTC)
-- [Call 1to1 WD only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1%20WD%20only)
-- [Call 1to1WebRTC only with drag and drop](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1WebRTC%20only%20with%20drag%20and%20drop)
-- [Call 1to1WebRTC only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1WebRTC%20only)
-- [Conference Call WD only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Conference%20Call%20WD%20only)
+- [Sample Code](https://github.com/weemo/Weemo.js_beta/tree/master/examples)
 
 
 For a full JavaScript API reference plese refer to our official documentation website : [http://docs.weemo.com/beta](http://docs.weemo.com/beta)
