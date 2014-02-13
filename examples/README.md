@@ -1,4 +1,4 @@
-# Weemo JavaScript API
+# Weemo JavaScript API examples 
 
 
 In this repository, you will find examples describing how to implement Weemo Video.
@@ -11,6 +11,8 @@ In this repository, you will find examples describing how to implement Weemo Vid
 - [Call 1to1WebRTC only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1WebRTC%20only)
 - [Conference Call WD only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Conference%20Call%20WD%20only)
 
+
+# Weemo JavaScript API Documentation
 
 For a full JavaScript API reference plese refer to our official documentation website : [http://docs.weemo.com/beta](http://docs.weemo.com/beta) and refer to our Github documentation:
 
