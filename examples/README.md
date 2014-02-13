@@ -5,6 +5,8 @@ In this repository, you will find examples describing how to implement Weemo Vid
 
 
 ###Content:
+- How to deploy the examples
+- How to use the examples
 - Examples
     - [Call 1to1 WD and WebRTC](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1%20WD%20and%20WebRTC)
     - [Call 1to1 WD only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1%20WD%20only)
