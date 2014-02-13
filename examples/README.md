@@ -82,7 +82,7 @@ Connected as Caller using (WeemoDriver|WebRTC)
 
 ##### Multi-party example (WeemoDriver only)
 
-The multi party example is composed of three html files. One called **host.html** and the other one named ```attendee1.html``` and ```attendee2.html```. In order to initiate a call between these three pages here are the steps you have to follow:
+The multi party example is composed of three html files. One called **host.html** and the other ones are named ```attendee1.html``` and ```attendee2.html```. In order to initiate a call between these three pages here are the steps you have to follow:
 
 - Open ```host.html``` in one computer and wait te be connected. You will know that you are connected when you will see these sentences appear in your browswer as well as a button labeled **'Click to Host a video conference'**:
 
