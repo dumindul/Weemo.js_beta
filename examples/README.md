@@ -47,7 +47,7 @@ You can find more details about ```AppID```, ```UID``` and ```Display Name``` [h
 
 ## How to use the examples
 
-Each one-to-one call examples are composed by two html files. One called ```caller.html``` and the other one named ```callee.html```. In order to initiate a call between these two pages here a the steps you have to follow:
+Each one-to-one call examples are composed by two html files. One called **caller.html** and the other one named ```callee.html```. In order to initiate a call between these two pages here a the steps you have to follow:
 
 - Open ```callee.html``` in one computer and wait te be connected. You will know that you are connected when you will see these sentences appear in your browswer:
 
@@ -56,13 +56,13 @@ Connected as Callee using (WeemoDriver|WebRTC).
 Waiting for a call.
 ```
 
-- At this moment open the ```caller.html``` in another computer and wait  to be connected. You will know that you are connected when you will see the following sentence appears in your browser as well as a button labeled 'Click to call Callee':
+- At this moment open the ```caller.html``` in another computer and wait  to be connected. You will know that you are connected when you will see the following sentence appears in your browser as well as a button labeled **'Click to call Callee'**:
 
 ```JavaScript
 Connected as Caller using (WeemoDriver|WebRTC)
 ```
 
-- Click the button 'Click to call Callee' in the ```caller.html``` page in your browser. The call is initiate.
+- Click the button **'Click to call Callee'** in the ```caller.html``` page in your browser. The call is initiate.
 - Answer the call in the ```callee.html``` page and the Video Chat starts.
 
 >Warning: If using WebRTC, you will be ask to allow access to your microphone and camera when initiating a call and when accepting a call. Click ```Allow``` in order to give WebRTC access to these peripherics. 
