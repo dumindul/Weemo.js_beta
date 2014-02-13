@@ -21,13 +21,13 @@ In this repository, you will find examples describing how to implement Weemo Vid
 ##### Requirement
 
 - It is important that the project is served from a webserver and not from the file system when using WebRTC.
-- Be aware of your AppId, and understnad what is a ```UID``` and a ```Display Name```
+- Be aware of your AppId, and understand what is a ```UID``` and a ```Display Name```
 
 You can find more details about AppID, UID and Display Name here
 
 ##### Setting up the AppID
 
-Once you had received your ```AppID``` provided by Weemo, you can setup these examples with your AppId in order to test the API. The only thing you have to do is to setup the ```AppId```.
+Once you have received your ```AppID``` provided by Weemo, you can setup these examples with your AppId in order to test the API. The only thing you have to do is to setup the ```AppId```.
 To do so, for each of the Javascript examples you want to use, you must edit the .html file and
 replace the placeholder "YOUR_APP_IDENTIFIER" by your AppID in the following lines"
 
