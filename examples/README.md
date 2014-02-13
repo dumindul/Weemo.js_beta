@@ -50,6 +50,8 @@ You can find more details about ```AppID```, ```UID``` and ```Display Name``` [h
 
 ### How to use the examples
 
+##### One-to-one examples
+
 Each one-to-one call example is composed of two html files. One called **caller.html** and the other one named ```callee.html```. In order to initiate a call between these two pages here a the steps you have to follow:
 
 - Open ```callee.html``` in one computer and wait te be connected. You will know that you are connected when you will see these sentences appear in your browswer:
@@ -69,6 +71,24 @@ Connected as Caller using (WeemoDriver|WebRTC)
 - Answer the call in the ```callee.html``` page and the Video Chat starts.
 
 >Warning: If using WebRTC, you will be ask to allow access to your microphone and camera when initiating a call and when accepting a call. Click ```Allow``` in order to give WebRTC access to these peripherics. 
+
+##### Multi-party example (WeemoDriver only)
+
+The multi party example is composed of three html files. One called **host.html** and the other one named ```attendee1.html``` and ```attendee2.html```. In order to initiate a call between these three pages here are the steps you have to follow:
+
+- Open ```host.html``` in one computer and wait te be connected. You will know that you are connected when you will see these sentences appear in your browswer as well as a button labeled **'Click to Host a video conference'**:
+
+```JavaScript
+Connected as Host using WeemoDriver.
+```
+
+- At this moment open the ```attendee1.html``` and  ```attendee2.html``` in two other computers and wait to be connected. You will know that you are connected when you will see the following sentence appears in your browser as well as a button labeled **'Click to join the Host video conference'**:
+
+```JavaScript
+Connected as Attendee using WeemoDriver
+```
+
+- Click the button in your 3 pages. The calls will be initiated and everybody will be part of the same conference room.
 
 
 # Weemo JavaScript API Documentation
