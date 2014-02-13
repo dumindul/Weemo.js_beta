@@ -43,10 +43,18 @@ var weemo = new Weemo("YOUR_APP_IDENTIFIER", "callee_uid", "internal", "", "1", 
 
 Now that you have setup the AppId you can upload the examples on a webserver and start using them.
 
+##### One-to-one examples
+
 In these examples, the ```UID``` and ```Display Name``` are already set. 
 In the **caller.html**, you will be connected using **caller_uid** as a ```UID``` and **Caller** as a ```Display Name```, and if you are using **callee.html**, you will be connected using **callee_uid** as a ```UID``` and **Callee** as a ```Display Name```.
 
-You can find more details about ```AppID```, ```UID``` and ```Display Name``` [here]()
+##### Multi-party example (WeemoDriver only)
+
+In these examples, the ```UID``` and ```Display Name``` are already set. 
+In the **host.html**, you will be connected using **host_uid** as a ```UID``` and **Host** as a ```Display Name```, and if you are using **attendee1.html** or **attendee2.html**, you will be connected using **attendee_one_uid** or **attendee_two_uid** as a ```UID``` and **Attendee 1** or **Attendee 2** as a ```Display Name```.
+
+>You can find more details about ```AppID```, ```UID``` and ```Display Name``` [here]()
+
 
 ### How to use the examples
 
