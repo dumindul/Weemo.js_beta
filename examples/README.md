@@ -21,6 +21,8 @@ In this repository, you will find examples describing how to implement Weemo Vid
 ##### Requirement
 
 It is important that the project is served from a webserver and not from the file system when using WebRTC.
+Be aware of your AppId, and understnad what is a ```UID``` and a ```Display Name```
+You can find more details about AppID, UID and Display Name here
 
 ##### Setting up the AppID
 
