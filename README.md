@@ -3,6 +3,7 @@
 
 In this repository, you will find, wiki pages describing how to implement Weemo Video in web applications.
 
+- [Getting Started](https://github.com/weemo/Weemo.js_beta/wiki/Getting-Started)
 - [Quick-start WeemoDriver and WebRTC](https://github.com/weemo/Release-5.x/wiki/Javascript-API---Quick-start)
 - [Integration WeemoDriver and WebRTC](https://github.com/weemo/Release-5.x/wiki/Javascript-API-Integration)
 - [Definitions](https://github.com/weemo/Release-4.0/wiki/WeemoDriver-Naming)
