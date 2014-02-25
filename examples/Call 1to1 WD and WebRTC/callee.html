@@ -15,14 +15,14 @@
 <body>
     <script type="text/javascript">
         var realTimeClient = "";
-        // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
-        var weemo = new Weemo("YOUR_APP_IDENTIFIER", "callee_uid", "internal", "", "1", "Callee");
+        // Initialize the Main Object with App Identifier, Uid, Debug, WeemoType, hap, DebugLevel, DisplayName, jQuery, pDefaultStyle
+        var weemo = new Weemo("YOUR_APP_IDENTIFIER", "callee_uid", "internal", "", "1", "Callee", false, true);
         //Initialize connection between the real-time client and the browser
         weemo.initialize();
-        // Call if the WeemoDriver is not running and the client computer
+        // Call if the WeemoDriver is not running on the client computer
         weemo.onWeemoDriverNotStarted = function(downloadUrl) {
                     alert('WeemoDriver not detected, copy and paste this following url on your browser: '+downloadUrl);
-            };
+        };
         // Get the Connection Handler callback when the JavaScript is connected to the real-time client
         weemo.onConnectionHandler = function(message, code) {
             if(window.console)
@@ -51,8 +51,7 @@
                 document.getElementById('call').innerHTML = "";
             }else if (args.type == "call" && args.status == "terminated") {
                 document.getElementById('stat').innerHTML = "Waiting for a call";
-            }
-            if(args.type == 'webRTCcall' && args.status == 'active') {
+            } else if(args.type == 'webRTCcall' && args.status == 'active') {
                 document.getElementById('call').innerHTML = "";
             } else if(args.type == 'webRTCcall' && args.status == 'failed') {
                 document.getElementById('call').innerHTML = "Call can not be established, try again";
