@@ -17,8 +17,8 @@
         var realTimeClient = "";
         // Initializze a object for current call
         var current_call = null;
-        // Initialize the Main Object with WebAppIdentifier, Token, Debug, WeemoType, hap, DebugLevel and DisplayName
-        var weemo = new Weemo("YOUR_APP_IDENTIFIER", "caller_uid", "internal","", "1", "Caller");
+        // Initialize the Main Object with App Identifier, Uid, Debug, WeemoType, hap, DebugLevel, DisplayName, jQuery, pDefaultStyle
+        var weemo = new Weemo("YOUR_APP_IDENTIFIER", "caller_uid", "internal","", "1", "Caller", false, true);
         //Initialize connection between the real-time client and the browser
         weemo.initialize();
         // Get the Connection Handler callback when the JavaScript is connected to WebRTC
