@@ -42,7 +42,7 @@ replace the placeholder "YOUR_APP_IDENTIFIER" by your AppID in the following lin
 and 
 
 ```JavaScript
-var weemo = new Weemo("YOUR_APP_IDENTIFIER", "callee_uid", "internal", "", "1", "Callee");
+var weemo = new Weemo("YOUR_APP_IDENTIFIER", "callee_uid", "internal", "", "1", "Callee", false, true);
 ```
 
 Now that you have setup the AppId you can upload the examples on a webserver and start using them.
