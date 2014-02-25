@@ -14,6 +14,8 @@
 </head>
 <body>
     <script type="text/javascript">
+        if(window.location.protocol === 'file:'){alert('your project must be served from a webserver and not from the file system');}
+
         var realTimeClient = "";
         // Initialize the Main Object with App Identifier, Uid, Debug, WeemoType, hap, DebugLevel, DisplayName, jQuery, pDefaultStyle
         var weemo = new Weemo("YOUR_APP_IDENTIFIER", "callee_uid", "internal", "", "1", "Callee", false, true);
