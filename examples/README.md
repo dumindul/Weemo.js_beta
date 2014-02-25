@@ -11,8 +11,8 @@ In this repository, you will find examples describing how to implement Weemo Vid
         - [One-to-one examples](https://github.com/weemo/Weemo.js_beta/tree/master/examples#one-to-one-examples)
         - [Multi-party example (WeemoDriver only)](https://github.com/weemo/Weemo.js_beta/tree/master/examples#multi-party-example-weemodriver-only)
 - [How to use the examples](https://github.com/weemo/Weemo.js_beta/tree/master/examples#how-to-use-the-examples)
-    - [One-to-one examples]()
-    - [Multi-party example (WeemoDriver only)]()
+    - [One-to-one examples](https://github.com/weemo/Weemo.js_beta/tree/master/examples#one-to-one-examples-1)
+    - [Multi-party example (WeemoDriver only)](https://github.com/weemo/Weemo.js_beta/tree/master/examples#multi-party-example-weemodriver-only-1)
 - Examples
     - [Call 1to1 WD and WebRTC](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1%20WD%20and%20WebRTC)
     - [Call 1to1 WD only](https://github.com/weemo/Weemo.js_beta/tree/master/examples/Call%201to1%20WD%20only)
