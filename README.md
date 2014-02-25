@@ -9,6 +9,7 @@ In this repository, you will find, wiki pages describing how to implement Weemo 
 - [Definitions](https://github.com/weemo/Release-4.0/wiki/WeemoDriver-Naming)
 - [Sample Code](https://github.com/weemo/Weemo.js_beta/tree/master/examples)
 - [Upgrade from 4.2 to 5.1](https://github.com/weemo/Weemo.js_beta/wiki/Upgrade-from-4.2-to-5.1)
+- [Weemo Driver User Guide](https://github.com/weemo/Weemo.js_beta/wiki/Weemo-Driver-User-Guide)
 
 For a full JavaScript API reference plese refer to our official documentation website : [http://docs.weemo.com/beta](http://docs.weemo.com/beta)
 
